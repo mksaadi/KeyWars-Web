@@ -27,7 +27,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: C:\Users\User\AppData\Local\Temp\tmps4lf7cwo.js
+// include: C:\Users\User\AppData\Local\Temp\tmpk13qew1i.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -210,21 +210,21 @@ Module['FS_createPath']("/", "sounds", true, true);
 
   })();
 
-// end include: C:\Users\User\AppData\Local\Temp\tmps4lf7cwo.js
-// include: C:\Users\User\AppData\Local\Temp\tmpjzvuom2j.js
+// end include: C:\Users\User\AppData\Local\Temp\tmpk13qew1i.js
+// include: C:\Users\User\AppData\Local\Temp\tmpygwsbe27.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: C:\Users\User\AppData\Local\Temp\tmpjzvuom2j.js
-// include: C:\Users\User\AppData\Local\Temp\tmp4yz4o6g3.js
+  // end include: C:\Users\User\AppData\Local\Temp\tmpygwsbe27.js
+// include: C:\Users\User\AppData\Local\Temp\tmpkj1e9377.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: C:\Users\User\AppData\Local\Temp\tmp4yz4o6g3.js
+  // end include: C:\Users\User\AppData\Local\Temp\tmpkj1e9377.js
 
 
 var arguments_ = [];
@@ -9235,6 +9235,8 @@ async function createWasm() {
       win.shouldClose = value;
     };
 
+  var _glfwSetWindowSize = (winid, width, height) => GLFW.setWindowSize(winid, width, height);
+
   var _glfwSetWindowSizeCallback = (winid, cbfun) => GLFW.setWindowSizeCallback(winid, cbfun);
 
   var _glfwSwapBuffers = (winid) => GLFW.swapBuffers(winid);
@@ -10749,6 +10751,8 @@ var wasmImports = {
   glfwSetWindowIconifyCallback: _glfwSetWindowIconifyCallback,
   /** @export */
   glfwSetWindowShouldClose: _glfwSetWindowShouldClose,
+  /** @export */
+  glfwSetWindowSize: _glfwSetWindowSize,
   /** @export */
   glfwSetWindowSizeCallback: _glfwSetWindowSizeCallback,
   /** @export */
